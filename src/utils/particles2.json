@@ -1,0 +1,77 @@
+{
+  "autoPlay": true,
+  "background": {
+    "color": {
+      "value": "#fff"
+    }
+  },
+  "particles": {
+    "color": {
+      "value": "#202020"
+    },
+    "number": {
+      "value": 300,
+      "density": {
+        "enable": false
+      }
+    },
+    "size": {
+      "value": 4,
+      "random": true,
+      "anim": {
+        "speed": 4,
+        "size_min": 0.3
+      }
+    },
+    "line_linked": {
+      "enable": false
+    },
+    "move": {
+      "angle": {
+        "offset": 0,
+        "value": 0
+      },
+      "random": true,
+      "direction": "bottom",
+      "out_mode": "out",
+      "enable": true,
+      "speed": 1
+    },
+    "opacity": {
+      "random": {
+        "enable": true,
+        "minimumValue": 0.1
+      },
+      "value": {
+        "min": 0.1,
+        "max": 0.5
+      },
+      "animation": {
+        "count": 0,
+        "enable": false,
+        "speed": 1,
+        "decay": 0,
+        "sync": false,
+        "minimumValue": 0.1
+      }
+    }
+  },
+  "interactivity": {
+    "events": {
+      "onhover": {
+        "enable": false,
+        "mode": "bubble"
+      },
+      "onclick": {
+        "enable": true,
+        "mode": "repulse"
+      }
+    },
+    "modes": {
+      "repulse": {
+        "distance": 300,
+        "duration": 4
+      }
+    }
+  }
+}

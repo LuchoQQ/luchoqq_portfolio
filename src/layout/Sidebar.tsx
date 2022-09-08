@@ -34,6 +34,9 @@ const Sidebar = () => {
         bg="#252525"
         alignContent="space-between"
         flexDir="column"
+        position='fixed'
+        zIndex='99999999'
+        boxShadow='inset -1em 0em 10px #202020;'
       >
         <Grid h="20vh" justifyContent="center" alignContent="center">
           <Flex w="25vw" p="3rem" justifyContent="space-between">
@@ -49,15 +52,15 @@ const Sidebar = () => {
               <Text
                 color="#dedede"
                 fontSize="2xl"
-                fontFamily={theme.fonts.secondary}
+                fontFamily={theme.fonts.primary}
                 textAlign="end"
               >
-                Luciano Sánchez
+                Luciano Sanchez
               </Text>
               <Text
                 color="#737272"
                 fontSize="lg"
-                fontFamily={theme.fonts.secondary}
+                fontFamily={theme.fonts.primary}
                 textAlign="end"
               >
                 Fullstack Developer
@@ -73,7 +76,7 @@ const Sidebar = () => {
         </Grid>
 
         <Grid h="15vh" mt="auto" justifyContent="center" alignContent="center">
-          <Flex gap="2rem">
+          <Flex gap="3rem">
             <Icon as={AiFillLinkedin} fill="#737272" fontSize="3xl" />
             <Icon as={AiFillGithub} fill="#737272" fontSize="3xl" />
             <Icon as={AiOutlineWhatsApp} fill="#737272" fontSize="3xl" />
