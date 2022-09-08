@@ -7,10 +7,17 @@ import {
   AiOutlineWhatsApp,
   AiFillMail,
 } from "react-icons/ai";
+import { FaUserAlt } from "react-icons/fa";
+import { BsFillBriefcaseFill } from "react-icons/bs";
 import NavItem from "../components/NavItem";
 import { ReactNode } from "react";
 
-const icons: { icon: ReactNode, url: string }[] = [
+interface ReactIcon {
+  icon: JSX.Element;
+  url: string;
+}
+
+const icons: ReactIcon[] = [
   {
     icon: <IoHome />,
     url: "./",
@@ -24,7 +31,7 @@ const Sidebar = () => {
       <Flex
         w="25vw"
         h="100vh"
-        bg="#202020"
+        bg="#252525"
         alignContent="space-between"
         flexDir="column"
       >
@@ -35,38 +42,42 @@ const Sidebar = () => {
                 src="https://res.cloudinary.com/diylksocz/image/upload/v1658451055/378a270e775265622393da8c0527417e_phnp4l.jpg"
                 w="100%"
                 h="100%"
+                rounded="5px"
               />
             </Box>
             <Box>
               <Text
                 color="#dedede"
                 fontSize="2xl"
-                fontFamily={theme.fonts.primary}
-                textAlign="center"
+                fontFamily={theme.fonts.secondary}
+                textAlign="end"
               >
-                LuchoQQ
+                Luciano Sánchez
               </Text>
               <Text
-                color="#ababab"
-                fontSize="xl"
-                fontFamily={theme.fonts.primary}
-                textAlign="center"
+                color="#737272"
+                fontSize="lg"
+                fontFamily={theme.fonts.secondary}
+                textAlign="end"
               >
-                Fullstack Dev
+                Fullstack Developer
               </Text>
             </Box>
           </Flex>
         </Grid>
         <Grid>
-          <NavItem icon={icons[0]} name="home" />
+          <NavItem icon={IoHome} name="Inicio" />
+          <NavItem icon={FaUserAlt} name="About me" />
+          <NavItem icon={BsFillBriefcaseFill} name="Portfolio" />
+          <NavItem icon={AiFillMail} name="Contact" />
         </Grid>
 
         <Grid h="15vh" mt="auto" justifyContent="center" alignContent="center">
-          <Flex gap="1rem">
-            <Icon as={AiFillLinkedin} fill="#808080" fontSize="3xl" />
-            <Icon as={AiFillGithub} fill="#808080" fontSize="3xl" />
-            <Icon as={AiOutlineWhatsApp} fill="#808080" fontSize="3xl" />
-            <Icon as={AiFillMail} fill="#808080" fontSize="3xl" />
+          <Flex gap="2rem">
+            <Icon as={AiFillLinkedin} fill="#737272" fontSize="3xl" />
+            <Icon as={AiFillGithub} fill="#737272" fontSize="3xl" />
+            <Icon as={AiOutlineWhatsApp} fill="#737272" fontSize="3xl" />
+            <Icon as={AiFillMail} fill="#737272" fontSize="3xl" />
           </Flex>
         </Grid>
       </Flex>

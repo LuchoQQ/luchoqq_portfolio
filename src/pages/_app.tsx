@@ -1,7 +1,7 @@
 import type { AppProps } from "next/app";
 import { ChakraProvider, extendTheme } from "@chakra-ui/react";
 import "@fontsource/arimo/700.css"
-import "@fontsource/poppins"
+import "@fontsource/poppins/700.css"
 
 
 const theme = extendTheme({
