@@ -21,22 +21,39 @@ const Main = () => {
         >
           <Text
             fontSize="6xl"
-            fontFamily={theme.fonts.secondary}
+            fontFamily={theme.fonts.quart}
             textAlign="center"
           >
             Hi!, I'm Luciano Sanchez
           </Text>
           <Text
-            fontSize="4xl"
-            fontFamily={theme.fonts.primary}
+            fontSize="3xl"
+            fontFamily={theme.fonts.quart}
             textAlign="center"
           >
-            I'm a 21 years old web developer, i have experience in frontend and
-            backend
+            I'm a 21 years old web developer
           </Text>
-          <Flex justifyContent='center' gap='2rem' mt='2rem'>
-            <Button size='lg'>Curriculum</Button>
-            <Button size='lg'>Curriculum</Button>
+          <Flex justifyContent="center" gap="2rem" mt="2rem">
+            <Box
+              role="group"
+              transition='all 1s ease'
+              transform='skewX(10deg)'
+              position="relative"
+              _hover={{ top: '-5px'}}
+            >
+              <Box
+                p="1rem"
+                border="1px solid blue"
+                boxShadow="10px 10px 0px 0px #204b6a"
+                rounded="0px"
+                transition='all 2s ease'
+                
+              >
+                <Text fontFamily={theme.fonts.secondary} fontSize="xl">
+                  Download CV
+                </Text>
+              </Box>
+            </Box>
           </Flex>
         </Grid>
         <Grid h="200vh"></Grid>

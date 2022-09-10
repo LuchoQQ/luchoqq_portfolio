@@ -14,8 +14,8 @@ const NavItem = ({ icon, name }: Props) => {
         w="25vw"
         py="1.5rem"
         justifyContent="space-between"
-        //_hover={{ bg: "#151515" }}
-        transition="all .2s ease"
+        _hover={{ bg: "#10191f" }}
+        transition="all .5s ease"
         cursor='pointer'
         pl='3rem'
         pr='3rem'

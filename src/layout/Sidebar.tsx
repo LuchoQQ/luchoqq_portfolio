@@ -31,12 +31,12 @@ const Sidebar = () => {
       <Flex
         w="25vw"
         h="100vh"
-        bg="#252525"
+        bg="#17222a"
         alignContent="space-between"
         flexDir="column"
-        position='fixed'
-        zIndex='99999999'
-        boxShadow='inset -1em 0em 10px #202020;'
+        position="fixed"
+        zIndex="99999999"
+        //boxShadow="inset 50px 0px 2rem #181b1e, 5px 0px 1rem #202428"
       >
         <Grid h="20vh" justifyContent="center" alignContent="center">
           <Flex w="25vw" p="3rem" justifyContent="space-between">
