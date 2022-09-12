@@ -1,8 +1,14 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Sidebar from "../layout/Sidebar";
-import { Grid } from '@chakra-ui/react'
+import { Box, Grid } from "@chakra-ui/react";
 import Main from "../layout/Main";
+import ParticlesBackground from "../components/ParticlesBackground";
+import particles2 from "../utils/particles2.json";
+import About from "../layout/About";
+import Portfolio from "../layout/Portfolio";
+import Contact from "../layout/Contact";
+
 const Home: NextPage = () => {
   return (
     <>
@@ -12,14 +18,17 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Grid
-          autoFlow='column'
-        >
+      <Grid autoFlow="column" justifyContent="center" >
         <Sidebar />
-        <Main />
+        <Grid w={["100vw", "100vw",'100vw', "75vw", "75vw", "75vw"]} h='auto' justifyContent='center' alignContent='center'>
+          <Main />
+          <About />
+          <Portfolio />
+          <Contact />
         </Grid>
-      </main>
+      </Grid>
+
+      <ParticlesBackground particles={particles2} />
     </>
   );
 };

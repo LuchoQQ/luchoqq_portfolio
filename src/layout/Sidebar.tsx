@@ -11,7 +11,7 @@ import { FaUserAlt } from "react-icons/fa";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import NavItem from "../components/NavItem";
 import { ReactNode } from "react";
-
+import Scrollspy from "@makotot/ghostui";
 interface ReactIcon {
   icon: JSX.Element;
   url: string;
@@ -28,6 +28,8 @@ const Sidebar = () => {
   const theme = useTheme();
   return (
     <>
+      <Box w="25vw" h="100vh" display={["none", "none", "none", "flex", "flex"]}/>
+
       <Flex
         w="25vw"
         h="100vh"
@@ -36,6 +38,7 @@ const Sidebar = () => {
         flexDir="column"
         position="fixed"
         zIndex="99999999"
+        display={["none", "none", "none", "flex", "flex"]}
         //boxShadow="inset 50px 0px 2rem #181b1e, 5px 0px 1rem #202428"
       >
         <Grid h="20vh" justifyContent="center" alignContent="center">
