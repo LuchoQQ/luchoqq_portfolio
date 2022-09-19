@@ -18,7 +18,10 @@ function TabAbout() {
       <Flex justifyContent="center">
         <Tabs w="auto" h="500px" variant="line" size="lg">
           <TabList fontFamily={theme.fonts.secondary}>
-            <Tab fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]} _selected={{ color: "#6a3fb5" }}>
+            <Tab
+              fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}
+              _selected={{ color: "#6a3fb5" }}
+            >
               About Me
             </Tab>
             <Tab
@@ -27,7 +30,10 @@ function TabAbout() {
             >
               Skills
             </Tab>
-            <Tab fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]} _selected={{ color: "#6a3fb5" }}>
+            <Tab
+              fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}
+              _selected={{ color: "#6a3fb5" }}
+            >
               Certifications
             </Tab>
           </TabList>
@@ -35,22 +41,22 @@ function TabAbout() {
           <TabPanels>
             <TabPanel>
               <Flex gap="1vw" flexWrap="wrap">
-                <Text color="#ababab" fontSize="4xl">
+                <Text color="#303030" fontSize="4xl">
                   Luciano Sánchez{" | "}
                 </Text>
                 <Text
-                  color="#ababab"
+                  color="#303030"
                   fontSize="2xl"
                   alignSelf={"center"}
-                  fontFamily={theme.fonts.heading}
+                  fontFamily={theme.fonts.primary}
                 >
                   Fullstack Dev
                 </Text>
               </Flex>
               <Text
                 w="500px"
-                color="#ababab"
-                fontFamily={theme.fonts.heading}
+                color="#505050"
+                fontFamily={theme.fonts.primary}
                 mt="2rem"
                 fontSize="xl"
               >
@@ -58,8 +64,8 @@ function TabAbout() {
               </Text>
               <Text
                 w="500px"
-                color="#ababab"
-                fontFamily={theme.fonts.heading}
+                color="#505050"
+                fontFamily={theme.fonts.primary}
                 mt="1rem"
                 fontSize="xl"
               >
@@ -68,8 +74,8 @@ function TabAbout() {
               </Text>
               <Text
                 w="500px"
-                color="#ababab"
-                fontFamily={theme.fonts.heading}
+                color="#505050"
+                fontFamily={theme.fonts.primary}
                 fontSize="xl"
                 mt="1rem"
               >
@@ -80,8 +86,8 @@ function TabAbout() {
             <TabPanel>
               <Text
                 w="500px"
-                color="#ababab"
-                fontFamily={theme.fonts.heading}
+                color="#303030"
+                fontFamily={theme.fonts.primary}
                 fontSize="2xl"
                 mt="1rem"
               >
@@ -89,8 +95,8 @@ function TabAbout() {
               </Text>
               <Text
                 w="500px"
-                color="#ababab"
-                fontFamily={theme.fonts.heading}
+                color="#505050"
+                fontFamily={theme.fonts.primary}
                 fontSize="xl"
                 mt="1rem"
               >
@@ -100,8 +106,8 @@ function TabAbout() {
               </Text>
               <Text
                 w="500px"
-                color="#ababab"
-                fontFamily={theme.fonts.heading}
+                color="#505050"
+                fontFamily={theme.fonts.primary}
                 fontSize="xl"
                 mt="1rem"
               >
@@ -109,8 +115,8 @@ function TabAbout() {
               </Text>
               <Text
                 w="500px"
-                color="#ababab"
-                fontFamily={theme.fonts.heading}
+                color="#505050"
+                fontFamily={theme.fonts.primary}
                 fontSize="xl"
                 mt="1rem"
               >
@@ -118,8 +124,8 @@ function TabAbout() {
               </Text>
               <Text
                 w="500px"
-                color="#ababab"
-                fontFamily={theme.fonts.heading}
+                color="#505050"
+                fontFamily={theme.fonts.primary}
                 fontSize="xl"
                 mt="1rem"
               >
@@ -127,32 +133,32 @@ function TabAbout() {
               </Text>
             </TabPanel>
             <TabPanel>
-              <Box fontFamily={theme.fonts.heading}>
-                <Text fontSize="xl" color="#ababab" mt="1rem">
+              <Box fontFamily={theme.fonts.primary}>
+                <Text fontSize="xl" color="#303030" mt="1rem">
                   Responsive Web Design
                 </Text>
                 <Text color="#ababab">-at FreeCodeCamp (July, 2021)</Text>
               </Box>
-              <Box fontFamily={theme.fonts.heading}>
-                <Text fontSize="xl" color="#ababab" mt="1rem">
+              <Box fontFamily={theme.fonts.primary}>
+                <Text fontSize="xl" color="#505050" mt="1rem">
                   Javascript Algorithms and Data Structure
                 </Text>
                 <Text color="#ababab">-at FreeCodeCamp (November, 2021)</Text>
               </Box>
-              <Box fontFamily={theme.fonts.heading}>
-                <Text fontSize="xl" color="#ababab" mt="1rem">
+              <Box fontFamily={theme.fonts.primary}>
+                <Text fontSize="xl" color="#505050" mt="1rem">
                   Front End Web Development Ultimate Course 2021
                 </Text>
                 <Text color="#ababab">-at Udemy (March, 2022)</Text>
               </Box>
-              <Box fontFamily={theme.fonts.heading}>
-                <Text fontSize="xl" color="#ababab" mt="1rem">
+              <Box fontFamily={theme.fonts.primary}>
+                <Text fontSize="xl" color="#505050" mt="1rem">
                   Escuela de Javascript
                 </Text>
                 <Text color="#ababab">-at Platzi (May, 2022)</Text>
               </Box>
-              <Box fontFamily={theme.fonts.heading}>
-                <Text fontSize="xl" color="#ababab" mt="1rem">
+              <Box fontFamily={theme.fonts.primary}>
+                <Text fontSize="xl" color="#505050" mt="1rem">
                   Aceleracion Fullstack
                 </Text>
                 <Text color="#ababab">-at Alkemy (July, 2022)</Text>

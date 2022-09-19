@@ -1,6 +1,5 @@
 import { Box, Button, Flex, Grid, Text, useTheme } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
-
 const Main = () => {
   const theme = useTheme();
 
@@ -8,11 +7,12 @@ const Main = () => {
     <>
       <Grid
         w={["100vh", "100vw", "75vw", "75vw", "75vw"]}
-        h="90vh"
+        minH="90vh"
         position="relative"
         zIndex="10"
         justifyContent="center"
         alignContent="center"
+        id="/"
       >
         <Text fontSize="6xl" fontFamily={theme.fonts.quart} textAlign="center">
           Hi!, I'm Luciano Sanchez

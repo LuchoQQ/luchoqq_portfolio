@@ -8,8 +8,11 @@ import particles2 from "../utils/particles2.json";
 import About from "../layout/About";
 import Portfolio from "../layout/Portfolio";
 import Contact from "../layout/Contact";
+import { useState } from "react";
 
 const Home: NextPage = () => {
+  const [nav, setNav] = useState("/");
+
   return (
     <>
       <Head>
@@ -18,13 +21,18 @@ const Home: NextPage = () => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Grid autoFlow="column" justifyContent="center" >
-        <Sidebar />
-        <Grid w={["100vw", "100vw",'100vw', "75vw", "75vw", "75vw"]} h='auto' justifyContent='center' alignContent='center'>
-          <Main />
-          <About />
-          <Portfolio />
-          <Contact />
+      <Grid autoFlow="column" justifyContent="center">
+        <Sidebar setNav={setNav} />
+        <Grid
+          w={["100vw", "100vw", "100vw", "75vw", "75vw", "75vw"]}
+          h="auto"
+          justifyContent="center"
+          alignContent="center"
+        >
+          <Main setNav={setNav} />
+          <About setNav={setNav} />
+          <Portfolio setNav={setNav} />
+          <Contact setNav={setNav} />
         </Grid>
       </Grid>
 

@@ -1,15 +1,4 @@
-import {
-  Box,
-  Flex,
-  Grid,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Tabs,
-  Text,
-  useTheme,
-} from "@chakra-ui/react";
+import { Flex, Grid, useTheme } from "@chakra-ui/react";
 import React from "react";
 import RadialMenu from "../components/RadialMenu";
 import TabAbout from "../components/TabAbout";
@@ -18,12 +7,13 @@ function About() {
   return (
     <>
       <Grid
-        h="90vh"
+        minH="100vh"
         position="relative"
         zIndex="10"
         justifyContent="center"
         alignContent="center"
         bg="#FDFDFD"
+        id="about"
       >
         <Flex
           alignSelf="center"
