@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import Head from "next/head";
 import Sidebar from "../layout/Sidebar";
-import { Box, Grid } from "@chakra-ui/react";
+import { Grid } from "@chakra-ui/react";
 import Main from "../layout/Main";
 import ParticlesBackground from "../components/ParticlesBackground";
 import particles2 from "../utils/particles2.json";

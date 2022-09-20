@@ -1,4 +1,4 @@
-import { Flex, Grid, useTheme } from "@chakra-ui/react";
+import { Flex, Grid, Text, useTheme } from "@chakra-ui/react";
 import React from "react";
 import RadialMenu from "../components/RadialMenu";
 import TabAbout from "../components/TabAbout";
@@ -11,10 +11,18 @@ function About() {
         position="relative"
         zIndex="10"
         justifyContent="center"
+        gap="2rem"
         alignContent="center"
         bg="#FDFDFD"
         id="about"
       >
+        <Text
+          fontSize="6xl"
+          fontFamily={theme.fonts.secondary}
+          textAlign='center'
+        >
+          ABOUT ME
+        </Text>
         <Flex
           alignSelf="center"
           flexDir={["column", "column", "column", "column", "row"]}

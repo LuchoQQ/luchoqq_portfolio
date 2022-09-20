@@ -13,12 +13,22 @@ const Main = () => {
         justifyContent="center"
         alignContent="center"
         id="/"
+        px="5rem"
       >
-        <Text fontSize="6xl" fontFamily={theme.fonts.quart} textAlign="center">
-          Hi!, I'm Luciano Sanchez
+        <Text
+          fontSize="6xl"
+          fontFamily={theme.fonts.secondary}
+          textAlign="center"
+        >
+          Hola!, soy Luciano Sanchez
         </Text>
-        <Text fontSize="3xl" fontFamily={theme.fonts.quart} textAlign="center">
-          I'm a 21 years old web developer
+        <Text
+          fontSize="3xl"
+          fontFamily={theme.fonts.primary}
+          textAlign="center"
+        >
+          Soy desarrollador Fullstack, en este sitio podrás ver algunos de los
+          proyectos en los que hé trabajado, sobre mí y mi contacto
         </Text>
         <Grid justifyContent="center" gap="2rem" mt="2rem" autoFlow="column">
           <Box
