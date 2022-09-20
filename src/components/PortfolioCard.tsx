@@ -1,4 +1,12 @@
-import { Box, Button, Flex, Grid, Image, Text, useTheme } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Flex,
+  Grid,
+  Image,
+  Text,
+  useTheme,
+} from "@chakra-ui/react";
 import React from "react";
 
 function PortfolioCard({ title, description, src }: any) {
@@ -6,8 +14,13 @@ function PortfolioCard({ title, description, src }: any) {
 
   return (
     <>
-      <Grid w="20vw" justifySelf="center" position="relative" boxShadow="1px 1px 10px 1px #dedede">
-        <Flex gap="1rem" bg="#fff" flexDir="column" >
+      <Grid
+        w="20vw"
+        justifySelf="center"
+        position="relative"
+        boxShadow="1px 1px 5px 5px #dedede"
+      >
+        <Flex gap="1rem" bg="#fff" flexDir="column">
           <Image src={src} w="400px" />
           <Grid p="1rem" gap="1rem">
             <Text
@@ -27,8 +40,10 @@ function PortfolioCard({ title, description, src }: any) {
               {description}
             </Text>
           </Grid>
-          <Button mt='auto'>
-            <Text fontSize='xl' fontFamily={theme.fonts.primary}>Ver mas</Text>
+          <Button mt="auto">
+            <Text fontSize="xl" fontFamily={theme.fonts.primary}>
+              Ver mas
+            </Text>
           </Button>
         </Flex>
       </Grid>
