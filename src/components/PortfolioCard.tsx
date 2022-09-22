@@ -17,24 +17,44 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 
-function PortfolioCard({ title, description, src }: any) {
+function PortfolioCard({
+  title,
+  description,
+  src,
+  briefDescription,
+  type,
+  stack,
+}: any) {
   const theme = useTheme();
 
   const { isOpen, onOpen, onClose } = useDisclosure();
   return (
     <>
-      <Modal isOpen={isOpen} onClose={onClose}>
+      <Modal isOpen={isOpen} onClose={onClose} size="2xl">
         <ModalOverlay />
         <ModalContent>
-          <ModalHeader>Modal Title</ModalHeader>
+          <ModalHeader>
+            <Text
+              fontSize="4xl"
+              fontFamily={theme.fonts.secondary}
+            >{`${title} Project`}</Text>
+          </ModalHeader>
           <ModalCloseButton />
-          <ModalBody>Ho</ModalBody>
+          <ModalBody>
+            <Grid h='auto'>
+              <Text fontSize="xl" fontFamily={theme.fonts.primary}>
+                {description}
+              </Text>
+              <Text fontSize="xl" fontFamily={theme.fonts.primary} mt='2rem'>
+                {stack}
+              </Text>
+            </Grid>
+          </ModalBody>
 
           <ModalFooter>
-            <Button colorScheme="blue" mr={3} onClick={onClose}>
+            <Button colorScheme="red" mr={3} onClick={onClose}>
               Close
             </Button>
-            <Button variant="ghost">Secondary Action</Button>
           </ModalFooter>
         </ModalContent>
       </Modal>
@@ -47,21 +67,31 @@ function PortfolioCard({ title, description, src }: any) {
         <Flex gap="1rem" bg="#fff" flexDir="column">
           <Image src={src} w="400px" />
           <Grid p="1rem" gap="1rem">
-            <Text
-              fontFamily={theme.fonts.secondary}
-              textAlign="center"
-              fontSize="2xl"
-              color="#505050"
-            >
-              {title}
-            </Text>
+            <Box>
+              <Text
+                fontFamily={theme.fonts.secondary}
+                textAlign="center"
+                fontSize="2xl"
+                color="#505050"
+              >
+                {title}
+              </Text>
+              <Text
+                fontSize="xl"
+                textAlign="center"
+                fontFamily={theme.fonts.primary}
+                color="#707070"
+              >
+                {type}
+              </Text>
+            </Box>
             <Text
               textAlign="center"
               fontFamily={theme.fonts.primary}
               color="#505050"
               fontSize="xl"
             >
-              {description}
+              {briefDescription}
             </Text>
           </Grid>
           <Button mt="auto" onClick={onOpen}>

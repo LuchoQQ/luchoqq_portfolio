@@ -39,6 +39,7 @@ const Main = () => {
             fontSize={["xl", "2xl"]}
             fontFamily={theme.fonts.primary}
             textAlign="center"
+            color="#505050"
           >
             Muchas gracias por visitar mi portfolio!, soy desarrollador
             Fullstack y en este sitio podrás ver algunos de los proyectos en los
