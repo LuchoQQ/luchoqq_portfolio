@@ -29,47 +29,11 @@ function Contact() {
         alignContent="center"
         bg="#fff"
         id="contact"
+        autoFlow={['row', 'column']}
       >
-        <Text
-          fontSize="6xl"
-          fontFamily={theme.fonts.secondary}
-          textAlign="center"
-          mb="4rem"
-        >
-          Contactame
-        </Text>
+        
         <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]} gap="5rem">
-          <Box w="25vw" h="auto">
-            <Text fontSize="3xl" fontFamily={theme.fonts.secondary} p="2rem">
-              Buscame en mis redes!
-            </Text>
-            <Grid templateColumns="repeat(2,1fr)" gap="2rem" p="1rem">
-              <ContactCard
-                icon={BsLinkedin}
-                path="https://www.linkedin.com/in/luchoqq"
-                content="linkedin.com/in/luchoqq"
-                color="#0a66c2"
-              />
-              <ContactCard
-                icon={AiOutlineGithub}
-                path="https://www.github.com/luchoqq"
-                content="github.com/LuchoQQ"
-                color="#000"
-              />
-              <ContactCard
-                icon={IoLogoWhatsapp}
-                path="https://wa.link/9fziuq"
-                content="+543794913997"
-                color="#34bb47"
-              />
-              <ContactCard
-                icon={AiFillMail}
-                path="mailto:luchoqq25@gmail.com"
-                content="luchoqq25@gmail.com"
-                color="#ea4335"
-              />
-            </Grid>
-          </Box>
+         
           <Flex
             w="25vw"
             h="auto"

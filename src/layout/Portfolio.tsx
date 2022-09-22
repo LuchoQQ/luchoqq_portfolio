@@ -16,7 +16,7 @@ function Portfolio() {
         id="portfolio"
         gap="1rem"
       >
-        <Box p="4rem">
+        <Box p="2rem">
           <Text
             fontSize="6xl"
             fontFamily={theme.fonts.secondary}

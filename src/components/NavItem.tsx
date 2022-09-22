@@ -27,6 +27,9 @@ const NavItem = ({ icon, name, path, setNav, nav }: Props) => {
         smooth="true"
         offset={0}
         onSetActive={(e: any) => setNav(e)}
+        style={{
+          textDecoration: "none",
+        }}
       >
         <Flex
           w="25vw"
@@ -38,8 +41,17 @@ const NavItem = ({ icon, name, path, setNav, nav }: Props) => {
           pl="3rem"
           pr="3rem"
         >
-          <Icon as={icon} fontSize="3xl" fill={nav === path ? '#6a3fb5' : '#727272'} alignSelf="center" />
-          <Text color={nav === path ? '#6a3fb5' : '#727272'} fontSize="2xl" fontFamily={theme.fonts.primary}>
+          <Icon
+            as={icon}
+            fontSize="3xl"
+            fill={nav === path ? "#6a3fb5" : "#727272"}
+            alignSelf="center"
+          />
+          <Text
+            color={nav === path ? "#6a3fb5" : "#727272"}
+            fontSize="2xl"
+            fontFamily={theme.fonts.primary}
+          >
             {name}
           </Text>
         </Flex>

@@ -60,7 +60,7 @@ function TabAbout() {
                 mt="2rem"
                 fontSize="xl"
               >
-                I am 20 years old I am from Corrientes, Argentina.
+                Tengo 21 años, soy de Corrientes Argentina
               </Text>
               <Text
                 w="500px"
@@ -69,8 +69,9 @@ function TabAbout() {
                 mt="1rem"
                 fontSize="xl"
               >
-                More than a year ago I discovered programming and began to study
-                as a self-taught, today it is my main activity of the day.
+                Hace más de un año que descubrí la programación, desde entonces
+                tanto programar como aprender son mi principal y favorita
+                actividad del día.
               </Text>
               <Text
                 w="500px"
@@ -79,8 +80,19 @@ function TabAbout() {
                 fontSize="xl"
                 mt="1rem"
               >
-                Technology, science and video games are some of my interests,
-                including the creation of web applications.
+                Tengo experiencia realizando E-Commerces, portales,
+                landing-pages, aplicaciones webs. Tanto del lado del Frontend
+                como del Backend.
+              </Text>
+              <Text
+                w="500px"
+                color="#505050"
+                fontFamily={theme.fonts.primary}
+                fontSize="xl"
+                mt="1rem"
+              >
+                La tecnología, la ciencia y los videojuegos me fascinan, siempre
+                estoy dispuesto a conversar sobre estos tópicos!.
               </Text>
             </TabPanel>
             <TabPanel>
@@ -91,7 +103,7 @@ function TabAbout() {
                 fontSize="2xl"
                 mt="1rem"
               >
-                Some technologies I use:
+                Algunas de las tecnologías que utilizo son:
               </Text>
               <Text
                 w="500px"
@@ -111,7 +123,8 @@ function TabAbout() {
                 fontSize="xl"
                 mt="1rem"
               >
-                Backend: NodeJS, Express, Mongoose, Sequelize...
+                Backend: NodeJS, Express, Mongoose, Sequelize, Jest,
+                express-validator,...
               </Text>
               <Text
                 w="500px"
@@ -120,7 +133,7 @@ function TabAbout() {
                 fontSize="xl"
                 mt="1rem"
               >
-                Databases: MongoDB, MySQL, PostgreSQL, jest, express-validator,
+                Databases: MongoDB, MySQL, PostgreSQL
               </Text>
               <Text
                 w="500px"
