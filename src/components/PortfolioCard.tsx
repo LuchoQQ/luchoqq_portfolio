@@ -14,7 +14,10 @@ import {
   ModalBody,
   ModalCloseButton,
   useDisclosure,
+  Link,
+  Icon,
 } from "@chakra-ui/react";
+import { AiOutlineGithub, AiOutlineGlobal } from "react-icons/ai";
 import React from "react";
 
 function PortfolioCard({
@@ -24,6 +27,9 @@ function PortfolioCard({
   briefDescription,
   type,
   stack,
+  github,
+  github2,
+  web,
 }: any) {
   const theme = useTheme();
 
@@ -41,14 +47,31 @@ function PortfolioCard({
           </ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Grid h='auto'>
+            <Flex h="auto" flexDir="column">
               <Text fontSize="xl" fontFamily={theme.fonts.primary}>
                 {description}
               </Text>
-              <Text fontSize="xl" fontFamily={theme.fonts.primary} mt='2rem'>
-                {stack}
+              <Text fontSize="xl" fontFamily={theme.fonts.primary} mt="2rem">
+                {`Stack: ${stack}`}
               </Text>
-            </Grid>
+              {github ? (
+                <Flex mt="2rem" gap="1rem">
+                  <Link href={github}>
+                    <Icon as={AiOutlineGithub} fontSize="4xl" />
+                  </Link>
+                  {github2 ? (
+                    <Link href={github2}>
+                      <Icon as={AiOutlineGithub} fontSize="4xl" />
+                    </Link>
+                  ) : null}
+                  {web ? (
+                    <Link href={web}>
+                      <Icon as={AiOutlineGlobal} fontSize="4xl" />
+                    </Link>
+                  ) : null}
+                </Flex>
+              ) : null}
+            </Flex>
           </ModalBody>
 
           <ModalFooter>
@@ -94,11 +117,13 @@ function PortfolioCard({
               {briefDescription}
             </Text>
           </Grid>
-          <Button mt="auto" onClick={onOpen}>
-            <Text fontSize="xl" fontFamily={theme.fonts.primary}>
-              Ver mas
-            </Text>
-          </Button>
+          <Flex justifyContent='center' mt='auto' mb='1rem'>
+            <Button onClick={onOpen} border='1px solid #202020' bg='#fff'>
+              <Text fontSize="xl" fontFamily={theme.fonts.primary}>
+                Ver mas
+              </Text>
+            </Button>
+          </Flex>
         </Flex>
       </Grid>
     </>
