@@ -18,12 +18,14 @@ const Main = () => {
   return (
     <>
       <Flex
-        w={["100vh", "100vw", "100vw", "75vw", "75vw"]}
+        //w={["100vh", "100vw", "100vw", "75vw", "75vw"]}
+        //w="100vw"
         minH="100vh"
         position="relative"
         zIndex="10"
         id="/"
         px={["0", "5rem"]}
+        gap="5rem"
         flexDir="column"
         alignContent="center"
       >

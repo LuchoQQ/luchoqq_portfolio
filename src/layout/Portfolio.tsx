@@ -15,6 +15,7 @@ function Portfolio() {
         bg="#F1F6F6"
         id="portfolio"
         gap="1rem"
+        boxShadow="10px 10px 10px 5px black"
       >
         <Box p="2rem">
           <Text
@@ -36,6 +37,26 @@ function Portfolio() {
           </Text>
         </Box>
         <Flex gap="3rem" flexWrap="wrap" py="2rem" justifyContent="center">
+          <PortfolioCard
+            title="Portfolio"
+            type="Landing Page"
+            briefDescription="Este mismo :)"
+            description=""
+            src="https://res.cloudinary.com/diylksocz/image/upload/v1664203664/Captura_de_pantalla_2022-09-26_114732_rkt2hp.png"
+            stack="ReactJS, ChakraUI, NodeJS, MongoDB, Mongoose, AWS S3"
+            github="https://github.com/LuchoQQ/sporty"
+            web=""
+          />
+          <PortfolioCard
+            title="Ibiza"
+            type="Landing Page"
+            briefDescription="Ibiza es una landing para un nightclub donde puedes realizar reservas"
+            description="Sporty es un E-commerce de ropa deportiva donde puedes buscar productos o filtrarlo según su precio, categoria, o marca. Los recursos de los productos se almacenan en la nube de AWS S3. Tambien posee backoffice para agregar/editar/eliminar el contenido"
+            src="https://res.cloudinary.com/diylksocz/image/upload/v1664202579/Captura_de_pantalla_2022-09-26_111130_cvr7ky.png"
+            stack="ReactJS, ChakraUI, NodeJS, MongoDB, Mongoose, AWS S3"
+            github="https://github.com/LuchoQQ/sporty"
+            web=""
+          />
           <PortfolioCard
             title="Sporty"
             type="E-Commerce"

@@ -30,9 +30,9 @@ const Home: NextPage = () => {
           alignContent="center"
         >
           <Main setNav={setNav} />
-          <About setNav={setNav} />
+          {/* <About setNav={setNav} />
           <Portfolio setNav={setNav} />
-          <Contact setNav={setNav} />
+          <Contact setNav={setNav} /> */}
         </Grid>
       </Grid>
 

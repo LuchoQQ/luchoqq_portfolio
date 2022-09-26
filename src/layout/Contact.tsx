@@ -22,7 +22,7 @@ function Contact() {
   return (
     <>
       <Grid
-        w={["100vh", "100vw", "75vw", "75vw", "75vw"]}
+        w={["100vh", "100vw", "100vw", "75vw", "75vw"]}
         minH="100vh"
         position="relative"
         zIndex="10"
@@ -30,12 +30,13 @@ function Contact() {
         alignContent="center"
         bg="#fff"
         id="contact"
-        autoFlow={["row", "column"]}
+        autoFlow={["row", "row", "row", "column", "column"]}
+        boxShadow="10px 10px 10px 5px black"
+        py="4rem"
       >
-        <Grid templateColumns={["repeat(1, 1fr)", "repeat(2, 1fr)"]} gap="5rem">
+        <Flex gap="5rem" flexWrap="wrap" justifyContent="center">
           <Flex
-            w="25vw"
-            maxH="auto"
+            minW={["320px"]}
             flexDir="column"
             p="2rem"
             fontFamily={theme.fonts.primary}
@@ -52,7 +53,7 @@ function Contact() {
               <Text
                 alignSelf="center"
                 fontSize="xl"
-                fontFamily={theme.fonts.secondary}
+                fontFamily={theme.fonts.primary}
               >
                 linkedin/in/luchoqq
               </Text>
@@ -62,7 +63,7 @@ function Contact() {
               <Text
                 alignSelf="center"
                 fontSize="xl"
-                fontFamily={theme.fonts.secondary}
+                fontFamily={theme.fonts.primary}
               >
                 github.com/luchoqq
               </Text>
@@ -72,7 +73,7 @@ function Contact() {
               <Text
                 alignSelf="center"
                 fontSize="xl"
-                fontFamily={theme.fonts.secondary}
+                fontFamily={theme.fonts.primary}
               >
                 luchoqq25@gmail.com
               </Text>
@@ -82,14 +83,14 @@ function Contact() {
               <Text
                 alignSelf="center"
                 fontSize="xl"
-                fontFamily={theme.fonts.secondary}
+                fontFamily={theme.fonts.primary}
               >
                 +54 3794 913997
               </Text>
             </Flex>
           </Flex>
           <Flex
-            w="25vw"
+            w={["40vw", "40vw", "40vw", "25vw", "25vw"]}
             maxH="auto"
             flexDir="column"
             p="2rem"
@@ -115,7 +116,7 @@ function Contact() {
             </FormControl>
             <Button>Enviar</Button>
           </Flex>
-        </Grid>
+        </Flex>
       </Grid>
     </>
   );

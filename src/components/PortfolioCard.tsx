@@ -82,13 +82,14 @@ function PortfolioCard({
         </ModalContent>
       </Modal>
       <Grid
-        w="20vw"
+        minW={["320px"]}
+        maxW='20vw'
         justifySelf="center"
         position="relative"
         boxShadow="1px 1px 5px 5px #dedede"
       >
         <Flex gap="1rem" bg="#fff" flexDir="column">
-          <Image src={src} w="400px" />
+          <Image src={src} w={["320px","400px"]} />
           <Grid p="1rem" gap="1rem">
             <Box>
               <Text
@@ -117,8 +118,8 @@ function PortfolioCard({
               {briefDescription}
             </Text>
           </Grid>
-          <Flex justifyContent='center' mt='auto' mb='1rem'>
-            <Button onClick={onOpen} border='1px solid #202020' bg='#fff'>
+          <Flex justifyContent="center" mt="auto" mb="1rem">
+            <Button onClick={onOpen} border="1px solid #202020" bg="#fff">
               <Text fontSize="xl" fontFamily={theme.fonts.primary}>
                 Ver mas
               </Text>
