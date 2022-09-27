@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { Grid, Box, Flex, Image, Text, useTheme, Icon } from "@chakra-ui/react";
+import {
+  Grid,
+  Box,
+  Flex,
+  Image,
+  Text,
+  useTheme,
+  Icon,
+  Link,
+} from "@chakra-ui/react";
 import { IoHome } from "react-icons/io5";
 import {
   AiFillLinkedin,
@@ -10,21 +19,10 @@ import {
 import { FaUserAlt } from "react-icons/fa";
 import { BsFillBriefcaseFill } from "react-icons/bs";
 import NavItem from "../components/NavItem";
-interface ReactIcon {
-  icon: JSX.Element;
-  url: string;
-}
 
-const icons: ReactIcon[] = [
-  {
-    icon: <IoHome />,
-    url: "./",
-  },
-];
-
-const   Sidebar = () => {
+const Sidebar = () => {
   const [nav, setNav] = useState();
-  console.log(nav)
+  console.log(nav);
   const theme = useTheme();
   return (
     <>
@@ -43,7 +41,6 @@ const   Sidebar = () => {
         position="fixed"
         zIndex="99999999"
         display={["none", "none", "none", "flex", "flex"]}
-        //boxShadow="inset 50px 0px 2rem #181b1e, 5px 0px 1rem #202428"
       >
         <Grid h="20vh" justifyContent="center" alignContent="center">
           <Flex w="25vw" p="3rem" justifyContent="space-between">
@@ -108,10 +105,18 @@ const   Sidebar = () => {
 
         <Grid h="15vh" mt="auto" justifyContent="center" alignContent="center">
           <Flex gap="3rem">
-            <Icon as={AiFillLinkedin} fill="#737272" fontSize="3xl" />
-            <Icon as={AiFillGithub} fill="#737272" fontSize="3xl" />
-            <Icon as={AiOutlineWhatsApp} fill="#737272" fontSize="3xl" />
-            <Icon as={AiFillMail} fill="#737272" fontSize="3xl" />
+            <Link href="https://linkedin.com/in/luchoqq" isExternal={true}>
+              <Icon as={AiFillLinkedin} fill="#737272" fontSize="3xl" />
+            </Link>
+            <Link href="https://github.com/LuchoQQ" isExternal={true}>
+              <Icon as={AiFillGithub} fill="#737272" fontSize="3xl" />
+            </Link>
+            <Link href="https://walink.co/15a3f4" isExternal={true}>
+              <Icon as={AiOutlineWhatsApp} fill="#737272" fontSize="3xl" />
+            </Link>
+            <Link href='mailto:luchoqq25@gmail.com' isExternal={true}>
+              <Icon as={AiFillMail} fill="#737272" fontSize="3xl" />
+            </Link>
           </Flex>
         </Grid>
       </Flex>

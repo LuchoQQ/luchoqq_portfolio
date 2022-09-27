@@ -16,8 +16,8 @@ function TabAbout() {
   return (
     <>
       <Flex justifyContent="center">
-        <Tabs w="auto" h="500px" variant="line" size="lg">
-          <TabList fontFamily={theme.fonts.secondary}>
+        <Tabs w="auto" h="auto" variant="line" size="lg">
+          <TabList fontFamily={theme.fonts.secondary} justifyContent="center">
             <Tab
               fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}
               _selected={{ color: "#6a3fb5" }}
@@ -39,7 +39,7 @@ function TabAbout() {
           </TabList>
 
           <TabPanels>
-            <TabPanel>
+            <TabPanel px="4rem">
               <Flex gap="1vw" flexWrap="wrap">
                 <Text color="#303030" fontSize="4xl">
                   Luciano Sánchez{" | "}
@@ -54,7 +54,7 @@ function TabAbout() {
                 </Text>
               </Flex>
               <Text
-                w="500px"
+                maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 mt="2rem"
@@ -63,7 +63,7 @@ function TabAbout() {
                 Tengo 21 años, soy de Corrientes Argentina
               </Text>
               <Text
-                w="500px"
+                maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 mt="1rem"
@@ -74,7 +74,7 @@ function TabAbout() {
                 actividad del día.
               </Text>
               <Text
-                w="500px"
+                maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 fontSize="xl"
@@ -85,7 +85,7 @@ function TabAbout() {
                 como del Backend.
               </Text>
               <Text
-                w="500px"
+                maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 fontSize="xl"
@@ -95,9 +95,9 @@ function TabAbout() {
                 estoy dispuesto a conversar sobre estos tópicos!.
               </Text>
             </TabPanel>
-            <TabPanel>
+            <TabPanel px="4rem">
               <Text
-                w="500px"
+                maxW="500px"
                 color="#303030"
                 fontFamily={theme.fonts.primary}
                 fontSize="2xl"
@@ -106,7 +106,7 @@ function TabAbout() {
                 Algunas de las tecnologías que utilizo son:
               </Text>
               <Text
-                w="500px"
+                maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 fontSize="xl"
@@ -117,7 +117,7 @@ function TabAbout() {
                 styled-components...
               </Text>
               <Text
-                w="500px"
+                maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 fontSize="xl"
@@ -127,7 +127,7 @@ function TabAbout() {
                 express-validator,...
               </Text>
               <Text
-                w="500px"
+                maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 fontSize="xl"
@@ -136,7 +136,7 @@ function TabAbout() {
                 Databases: MongoDB, MySQL, PostgreSQL
               </Text>
               <Text
-                w="500px"
+                maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 fontSize="xl"
@@ -145,7 +145,7 @@ function TabAbout() {
                 General Skills: Jira, Trello, GitHub, Git
               </Text>
             </TabPanel>
-            <TabPanel>
+            <TabPanel px="4rem">
               <Box fontFamily={theme.fonts.primary}>
                 <Text fontSize="xl" color="#303030" mt="1rem">
                   Responsive Web Design

@@ -1,5 +1,4 @@
 import {
-  Box,
   Button,
   Flex,
   FormControl,
@@ -15,14 +14,12 @@ import { BsLinkedin } from "react-icons/bs";
 import { AiOutlineGithub, AiFillMail } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
 import React from "react";
-import ContactCard from "../components/ContactCard";
 
 function Contact() {
   const theme = useTheme();
   return (
     <>
       <Grid
-        w={["100vh", "100vw", "100vw", "75vw", "75vw"]}
         minH="100vh"
         position="relative"
         zIndex="10"
@@ -36,7 +33,7 @@ function Contact() {
       >
         <Flex gap="5rem" flexWrap="wrap" justifyContent="center">
           <Flex
-            minW={["320px"]}
+            minW={["90vw", "70vw", "40vw", "25vw", "25vw"]}
             flexDir="column"
             p="2rem"
             fontFamily={theme.fonts.primary}
@@ -90,7 +87,7 @@ function Contact() {
             </Flex>
           </Flex>
           <Flex
-            w={["40vw", "40vw", "40vw", "25vw", "25vw"]}
+            w={["90vw", "70vw", "40vw", "25vw", "25vw"]}
             maxH="auto"
             flexDir="column"
             p="2rem"
@@ -116,7 +113,7 @@ function Contact() {
             </FormControl>
             <Button>Enviar</Button>
           </Flex>
-        </Flex>
+        </Flex> 
       </Grid>
     </>
   );

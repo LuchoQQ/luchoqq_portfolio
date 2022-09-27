@@ -24,12 +24,12 @@ const Main = () => {
         position="relative"
         zIndex="10"
         id="/"
-        px={["0", "5rem"]}
+        px={["5rem", "5rem"]}
         gap="5rem"
         flexDir="column"
         alignContent="center"
       >
-        <Flex flexDir="column" mt="auto">
+        <Flex flexDir="column" mt="auto" gap='2rem'>
           <Text
             fontSize={["2xl", "6xl"]}
             fontFamily={theme.fonts.secondary}
