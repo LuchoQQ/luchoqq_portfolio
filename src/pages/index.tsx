@@ -22,17 +22,17 @@ const Home: NextPage = () => {
       </Head>
 
       <Grid autoFlow="column" justifyContent="center">
-        <Sidebar setNav={setNav} />
+        <Sidebar />
         <Grid
           w={["100vw", "100vw", "100vw", "75vw", "75vw", "75vw"]}
           h="auto"
           justifyContent="center"
           alignContent="center"
         >
-          <Main setNav={setNav} />
-          <About setNav={setNav} />
-          <Portfolio setNav={setNav} />
-          <Contact setNav={setNav} />
+          <Main />
+          <About />
+          <Portfolio />
+          <Contact />
         </Grid>
       </Grid>
 
