@@ -55,7 +55,7 @@ const Sidebar = () => {
             <Box>
               <Text
                 color="#dedede"
-                fontSize="2xl"
+                fontSize={["xl", "xl", "xl", "xl", "xl","2xl"]}
                 fontFamily={theme.fonts.primary}
                 textAlign="end"
               >
@@ -63,7 +63,7 @@ const Sidebar = () => {
               </Text>
               <Text
                 color="#737272"
-                fontSize="lg"
+                fontSize={["sm", "sm", "sm", "sn", "sm", "lg"]}
                 fontFamily={theme.fonts.primary}
                 textAlign="end"
               >
@@ -106,16 +106,32 @@ const Sidebar = () => {
         <Grid h="15vh" mt="auto" justifyContent="center" alignContent="center">
           <Flex gap="3rem">
             <Link href="https://linkedin.com/in/luchoqq" isExternal={true}>
-              <Icon as={AiFillLinkedin} fill="#737272" fontSize="3xl" />
+              <Icon
+                as={AiFillLinkedin}
+                fill="#737272"
+                fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "3xl"]}
+              />
             </Link>
             <Link href="https://github.com/LuchoQQ" isExternal={true}>
-              <Icon as={AiFillGithub} fill="#737272" fontSize="3xl" />
+              <Icon
+                as={AiFillGithub}
+                fill="#737272"
+                fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "3xl"]}
+              />
             </Link>
             <Link href="https://walink.co/15a3f4" isExternal={true}>
-              <Icon as={AiOutlineWhatsApp} fill="#737272" fontSize="3xl" />
+              <Icon
+                as={AiOutlineWhatsApp}
+                fill="#737272"
+                fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "3xl"]}
+              />
             </Link>
-            <Link href='mailto:luchoqq25@gmail.com' isExternal={true}>
-              <Icon as={AiFillMail} fill="#737272" fontSize="3xl" />
+            <Link href="mailto:luchoqq25@gmail.com" isExternal={true}>
+              <Icon
+                as={AiFillMail}
+                fill="#737272"
+                fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "3xl"]}
+              />
             </Link>
           </Flex>
         </Grid>

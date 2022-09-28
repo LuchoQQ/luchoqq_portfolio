@@ -41,6 +41,7 @@ function Contact() {
             rounded="20px"
             boxShadow="1px 1px 10px 1px #606060"
             justifyContent="center"
+            h="500px"
           >
             <Text fontSize="3xl" fontFamily={theme.fonts.secondary} mb="auto">
               Contactame!
@@ -87,6 +88,7 @@ function Contact() {
             </Flex>
           </Flex>
           <Flex
+            h="500px"
             w={["90vw", "70vw", "40vw", "25vw", "25vw"]}
             maxH="auto"
             flexDir="column"
@@ -96,24 +98,24 @@ function Contact() {
             rounded="20px"
             boxShadow="1px 1px 10px 1px #606060"
           >
-            <Text fontSize="3xl" fontFamily={theme.fonts.secondary} mb="2rem">
+            <Text fontSize={["2xl", "2xl", "2xl", "2xl", "2xl","3xl"]} fontFamily={theme.fonts.secondary} mb="2rem">
               Enviame tu opinión!
             </Text>
             <FormControl>
-              <FormLabel fontSize="2xl">Nombre</FormLabel>
+              <FormLabel fontSize={["xl", "xl", "xl", "xl", "xl","2xl"]} >Nombre</FormLabel>
               <Input></Input>
             </FormControl>
             <FormControl>
-              <FormLabel fontSize="2xl">E-mail</FormLabel>
+              <FormLabel fontSize={["xl", "xl", "xl", "xl", "xl","2xl"]} >E-mail</FormLabel>
               <Input></Input>
             </FormControl>
             <FormControl>
-              <FormLabel fontSize="2xl">Deja un mensaje</FormLabel>
+              <FormLabel fontSize={["xl", "xl", "xl", "xl", "xl","2xl"]} >Deja un mensaje</FormLabel>
               <Textarea></Textarea>
             </FormControl>
             <Button>Enviar</Button>
           </Flex>
-        </Flex> 
+        </Flex>
       </Grid>
     </>
   );

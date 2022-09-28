@@ -16,9 +16,10 @@ function About() {
         bg="#FDFDFD"
         id="about"
         boxShadow="10px 10px 10px 5px black"
+        p='2rem'
       >
         <Text
-          fontSize={["4xl", "6xl"]}
+          fontSize={["4xl","4xl", "4xl", "4xl","4xl", "6xl"]}
           fontFamily={theme.fonts.secondary}
           textAlign="center"
         >

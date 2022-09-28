@@ -7,14 +7,25 @@ import {
   Text,
   useTheme,
   Image,
+  position,
 } from "@chakra-ui/react";
 import { motion, isValidMotionProp } from "framer-motion";
 import TechsIcon from "../components/TechsIcon";
 import { Link } from "react-scroll";
+import fileDownload from "js-file-download";
+import axios from "axios";
 
 const Main = () => {
   const theme = useTheme();
-
+  const handleClick = (url: any, filename: any) => {
+    axios
+      .get(url, {
+        responseType: "blob",
+      })
+      .then((res: any) => {
+        fileDownload(res.data, filename);
+      });
+  };
   return (
     <>
       <Flex
@@ -28,67 +39,127 @@ const Main = () => {
         gap="5rem"
         flexDir="column"
         alignContent="center"
+        justifyContent="center"
       >
-        <Flex flexDir="column" mt="auto" gap='2rem'>
-          <Text
-            fontSize={["2xl", "6xl"]}
-            fontFamily={theme.fonts.secondary}
-            textAlign="center"
-          >
-            Hola!, soy Luciano Sanchez
-          </Text>
-          <Text
-            fontSize={["xl", "2xl"]}
-            fontFamily={theme.fonts.primary}
-            textAlign="center"
-            color="#505050"
-          >
-            Muchas gracias por visitar mi portfolio!, soy desarrollador
-            Fullstack y en este sitio podrás ver algunos de los proyectos en los
-            que hé trabajado, sobre mí y como contactarme.
-          </Text>
-          <Grid justifyContent="center" gap="2rem" mt="2rem" autoFlow="column">
-            <Box
-              //transform="skewX(10deg)"
-              as={motion.div}
-              drag="x"
-              dragConstraints={{ left: -100, right: 100 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition="0.2s linear"
-              padding="1rem"
-              border="1px solid #204b6a"
-              _hover={{
-                boxShadow: "10px 10px 0px 0px #204b6a",
+        <Flex
+          mt={["10vh", "0vh"]}
+          gap="5rem"
+          justifyContent="center"
+          alignContent="center"
+          flexDir={["column", "column", "column", "row", "row", "row"]}
+        >
+          <Flex flexDir="column" alignSelf="center">
+            <Text
+              fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "5xl"]}
+              fontFamily={theme.fonts.primary}
+              position="relative"
+              _before={{
+                content: `""`,
+                width: ["70px", "70px", "70px", "70px", "70px", "100px"],
+                height: "2px",
+                bg: "#202020",
+                position: "absolute",
+                top: "50%",
+                left: ["130px", "130px", "130px", "130px", "130px", "250px"],
+              }}
+              color="#202020"
+            >
+              ¡Hola!, soy
+            </Text>
+            <Text
+              fontSize={["2xl", "2xl", "2xl", "2xl", "4xl", "5xl"]}
+              fontFamily={theme.fonts.secondary}
+              color="#000"
+              textAlign="center"
+            >
+              Luciano Sanchez
+            </Text>
+            <Text
+              fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "2xl"]}
+              fontFamily={theme.fonts.primary}
+              position="relative"
+              textAlign="end"
+              mr="1rem"
+              _before={{
+                content: `""`,
+                width: "70px",
+                height: "2px",
+                bg: "#202020",
+                position: "absolute",
+                top: "50%",
+                left: "-10px",
               }}
             >
-              <Text fontFamily={theme.fonts.secondary} fontSize="xl">
-                Download CV
+              Fullstack Developer
+            </Text>
+            <Flex flexWrap="wrap" w="300px">
+              <Text
+                fontSize={["xl", "xl", "xl", "xl", "lg", "2xl"]}
+                fontFamily={theme.fonts.primary}
+                color="#505050"
+                position="relative"
+                mt="2rem"
+              >
+                Muchas gracias por visitar mi portfolio!, en este sitio podrás
+                ver algunos de los proyectos en los que hé trabajado, sobre mí y
+                como contactarme.
               </Text>
-            </Box>
-            <Box
-              as={motion.div}
-              drag="x"
-              dragConstraints={{ left: -100, right: 100 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition="0.2s linear"
-              padding="1rem"
-              border="1px solid #204b6a"
-              _hover={{
-                boxShadow: "10px 10px 0px 0px #204b6a",
-              }}
+            </Flex>
+          </Flex>
+
+          <Image
+            src="https://res.cloudinary.com/diylksocz/image/upload/v1664344093/Coding__Flatline_yi54yu.png"
+            fit="cover"
+            h="400px"
+            w="auto"
+            position="relative"
+          />
+        </Flex>
+        <Flex justifyContent="center" gap="2rem">
+          <Flex
+            //transform="skewX(10deg)"
+            as={motion.div}
+            drag="x"
+            dragConstraints={{ left: -100, right: 100 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition="0.2s linear"
+            padding="1rem"
+            border="1px solid #204b6a"
+            onClick={() => handleClick("../assets/cv.pdf", "LuchoQQPortfolio")}
+            _hover={{
+              boxShadow: "10px 10px 0px 0px #204b6a",
+            }}
+          >
+            <Text
+              fontFamily={theme.fonts.secondary}
+              fontSize="xl"
+              alignSelf="center"
             >
-              <Link to="contact" spy={true} smooth="true" offset={0}>
-                <Text fontFamily={theme.fonts.secondary} fontSize="xl">
-                  Go to Contact
-                </Text>
-              </Link>
-            </Box>
-          </Grid>
+              Download CV
+            </Text>
+          </Flex>
+          <Box
+            as={motion.div}
+            drag="x"
+            dragConstraints={{ left: -100, right: 100 }}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
+            transition="0.2s linear"
+            padding="1rem"
+            border="1px solid #204b6a"
+            _hover={{
+              boxShadow: "10px 10px 0px 0px #204b6a",
+            }}
+          >
+            <Link to="contact" spy={true} smooth="true" offset={0}>
+              <Text fontFamily={theme.fonts.secondary} fontSize="xl">
+                Go to Contact
+              </Text>
+            </Link>
+          </Box>
         </Flex>
         <Flex
-          mt="auto"
           w="100%"
           justifyContent="space-around"
           mb="1rem"
@@ -96,14 +167,6 @@ const Main = () => {
           gap="2rem"
         >
           <Grid>
-            {/* <Text
-              textAlign="center"
-              fontSize="xl"
-              fontFamily={theme.fonts.secondary}
-              mb='1rem'
-            >
-              Frontend
-            </Text> */}
             <Flex justifyContent="center" gap="1rem" flexWrap="wrap">
               <TechsIcon src="https://res.cloudinary.com/diylksocz/image/upload/v1663856274/html_hjlzsl.png" />
               <TechsIcon src="https://res.cloudinary.com/diylksocz/image/upload/v1663856738/CSS-Logo_nugbhg.png" />
@@ -116,13 +179,6 @@ const Main = () => {
             </Flex>
           </Grid>
           <Grid>
-            {/* <Text
-              textAlign="center"
-              fontSize="xl"
-              fontFamily={theme.fonts.secondary}
-            >
-              Backend
-            </Text> */}
             <Flex justifyContent="center" gap="2rem" flexWrap="wrap">
               <TechsIcon src="https://res.cloudinary.com/diylksocz/image/upload/v1663857396/1200px-Node.js_logo.svg_ep0yw5.png" />
               <TechsIcon src="https://res.cloudinary.com/diylksocz/image/upload/v1663857488/Expressjs_zhwchj.png" />

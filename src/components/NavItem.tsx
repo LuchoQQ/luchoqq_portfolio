@@ -43,13 +43,13 @@ const NavItem = ({ icon, name, path, setNav, nav }: Props) => {
         >
           <Icon
             as={icon}
-            fontSize="3xl"
+            fontSize={["xl", "xl", "xl", "xl", "xl", "3xl"]}
             fill={nav === path ? "#6a3fb5" : "#727272"}
             alignSelf="center"
           />
           <Text
             color={nav === path ? "#6a3fb5" : "#727272"}
-            fontSize="2xl"
+            fontSize={["lg", "lg", "lg", "lg", "lg", "2xl"]}
             fontFamily={theme.fonts.primary}
           >
             {name}

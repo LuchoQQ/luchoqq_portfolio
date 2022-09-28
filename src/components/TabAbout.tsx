@@ -58,7 +58,7 @@ function TabAbout() {
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 mt="2rem"
-                fontSize="xl"
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
               >
                 Tengo 21 años, soy de Corrientes Argentina
               </Text>
@@ -67,7 +67,7 @@ function TabAbout() {
                 color="#505050"
                 fontFamily={theme.fonts.primary}
                 mt="1rem"
-                fontSize="xl"
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
               >
                 Hace más de un año que descubrí la programación, desde entonces
                 tanto programar como aprender son mi principal y favorita
@@ -77,7 +77,7 @@ function TabAbout() {
                 maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
-                fontSize="xl"
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
                 Tengo experiencia realizando E-Commerces, portales,
@@ -88,7 +88,7 @@ function TabAbout() {
                 maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
-                fontSize="xl"
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
                 La tecnología, la ciencia y los videojuegos me fascinan, siempre
@@ -100,7 +100,7 @@ function TabAbout() {
                 maxW="500px"
                 color="#303030"
                 fontFamily={theme.fonts.primary}
-                fontSize="2xl"
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
                 Algunas de las tecnologías que utilizo son:
@@ -109,7 +109,7 @@ function TabAbout() {
                 maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
-                fontSize="xl"
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
                 Frontend: ReactJS, NextJS, TypeScript, Redux, ChakraUI,
@@ -120,7 +120,7 @@ function TabAbout() {
                 maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
-                fontSize="xl"
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
                 Backend: NodeJS, Express, Mongoose, Sequelize, Jest,
@@ -130,7 +130,7 @@ function TabAbout() {
                 maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
-                fontSize="xl"
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
                 Databases: MongoDB, MySQL, PostgreSQL
@@ -139,7 +139,7 @@ function TabAbout() {
                 maxW="500px"
                 color="#505050"
                 fontFamily={theme.fonts.primary}
-                fontSize="xl"
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
                 General Skills: Jira, Trello, GitHub, Git
@@ -147,31 +147,31 @@ function TabAbout() {
             </TabPanel>
             <TabPanel px="4rem">
               <Box fontFamily={theme.fonts.primary}>
-                <Text fontSize="xl" color="#303030" mt="1rem">
+                <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#303030" mt="1rem">
                   Responsive Web Design
                 </Text>
                 <Text color="#ababab">-at FreeCodeCamp (July, 2021)</Text>
               </Box>
               <Box fontFamily={theme.fonts.primary}>
-                <Text fontSize="xl" color="#505050" mt="1rem">
+                <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#505050" mt="1rem">
                   Javascript Algorithms and Data Structure
                 </Text>
                 <Text color="#ababab">-at FreeCodeCamp (November, 2021)</Text>
               </Box>
               <Box fontFamily={theme.fonts.primary}>
-                <Text fontSize="xl" color="#505050" mt="1rem">
+                <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#505050" mt="1rem">
                   Front End Web Development Ultimate Course 2021
                 </Text>
                 <Text color="#ababab">-at Udemy (March, 2022)</Text>
               </Box>
               <Box fontFamily={theme.fonts.primary}>
-                <Text fontSize="xl" color="#505050" mt="1rem">
+                <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#505050" mt="1rem">
                   Escuela de Javascript
                 </Text>
                 <Text color="#ababab">-at Platzi (May, 2022)</Text>
               </Box>
               <Box fontFamily={theme.fonts.primary}>
-                <Text fontSize="xl" color="#505050" mt="1rem">
+                <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#505050" mt="1rem">
                   Aceleracion Fullstack
                 </Text>
                 <Text color="#ababab">-at Alkemy (July, 2022)</Text>

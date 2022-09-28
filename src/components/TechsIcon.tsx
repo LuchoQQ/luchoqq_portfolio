@@ -6,7 +6,7 @@ function TechsIcon({ src }: any) {
     <>
       <Image
         src={src}
-        height="50px"
+        height={["30", "30", "30", "30", "30", "50px"]}
         fit="cover"
         transition="all .2s ease"
         _hover={{ transform: "scale(1.1)" }}
