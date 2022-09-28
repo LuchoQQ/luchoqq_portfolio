@@ -1,6 +1,8 @@
-import { Flex, Grid, Image, Text, useTheme } from "@chakra-ui/react";
+import { Box, Flex, Grid, Image, Text, useTheme } from "@chakra-ui/react";
 import React from "react";
+import { Link } from "react-scroll";
 import TabAbout from "../components/TabAbout";
+import { motion, isValidMotionProp } from "framer-motion";
 function About() {
   const theme = useTheme();
   return (
@@ -39,6 +41,9 @@ function About() {
               alignSelf="center"
             />
           </Flex>
+        </Flex>
+        <Flex justifyContent="center" gap="2rem" mt="auto">
+          
         </Flex>
       </Grid>
     </>

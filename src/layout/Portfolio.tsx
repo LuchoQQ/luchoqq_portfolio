@@ -50,7 +50,7 @@ function Portfolio() {
             title="Ibiza"
             type="Landing Page"
             briefDescription="Ibiza es una landing para un nightclub donde puedes realizar reservas"
-            description="Sporty es un E-commerce de ropa deportiva donde puedes buscar productos o filtrarlo según su precio, categoria, o marca. Los recursos de los productos se almacenan en la nube de AWS S3. Tambien posee backoffice para agregar/editar/eliminar el contenido"
+            description="Ibiza es una landing donde puedes ver los servicios que ofrece un nightclub"
             src="https://res.cloudinary.com/diylksocz/image/upload/v1664202579/Captura_de_pantalla_2022-09-26_111130_cvr7ky.png"
             stack="ReactJS, ChakraUI, NodeJS, MongoDB, Mongoose, AWS S3"
             github="https://github.com/LuchoQQ/sporty"

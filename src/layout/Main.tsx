@@ -9,65 +9,53 @@ import {
   Image,
   position,
 } from "@chakra-ui/react";
-import { motion, isValidMotionProp } from "framer-motion";
 import TechsIcon from "../components/TechsIcon";
 import { Link } from "react-scroll";
-import fileDownload from "js-file-download";
-import axios from "axios";
+import { motion, isValidMotionProp } from "framer-motion";
 
 const Main = () => {
   const theme = useTheme();
-  const handleClick = (url: any, filename: any) => {
-    axios
-      .get(url, {
-        responseType: "blob",
-      })
-      .then((res: any) => {
-        fileDownload(res.data, filename);
-      });
-  };
+
   return (
     <>
       <Flex
-        //w={["100vh", "100vw", "100vw", "75vw", "75vw"]}
-        //w="100vw"
         minH="100vh"
         position="relative"
         zIndex="10"
         id="/"
         px={["5rem", "5rem"]}
-        gap="5rem"
+        gap={["3rem", "0rem"]}
         flexDir="column"
         alignContent="center"
         justifyContent="center"
       >
         <Flex
-          mt={["10vh", "0vh"]}
-          gap="5rem"
+          mt={["5vh"]}
           justifyContent="center"
           alignContent="center"
           flexDir={["column", "column", "column", "row", "row", "row"]}
+          gap="4rem"
         >
           <Flex flexDir="column" alignSelf="center">
             <Text
-              fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "5xl"]}
+              fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "4xl"]}
               fontFamily={theme.fonts.primary}
               position="relative"
               _before={{
                 content: `""`,
-                width: ["70px", "70px", "70px", "70px", "70px", "100px"],
+                width: ["70px", "70px", "70px", "70px", "70px", "80px"],
                 height: "2px",
                 bg: "#202020",
                 position: "absolute",
                 top: "50%",
-                left: ["130px", "130px", "130px", "130px", "130px", "250px"],
+                left: ["130px", "130px", "130px", "130px", "130px", "190px"],
               }}
               color="#202020"
             >
               ¡Hola!, soy
             </Text>
             <Text
-              fontSize={["2xl", "2xl", "2xl", "2xl", "4xl", "5xl"]}
+              fontSize={["2xl", "2xl", "2xl", "2xl", "4xl", "4xl"]}
               fontFamily={theme.fonts.secondary}
               color="#000"
               textAlign="center"
@@ -75,26 +63,26 @@ const Main = () => {
               Luciano Sanchez
             </Text>
             <Text
-              fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "2xl"]}
+              fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "3xl"]}
               fontFamily={theme.fonts.primary}
               position="relative"
               textAlign="end"
               mr="1rem"
               _before={{
                 content: `""`,
-                width: "70px",
+                width: ["70px", "70px", "70px", "70px", "80px", "80px"],
                 height: "2px",
-                bg: "#202020",
+                bg: "#000",
                 position: "absolute",
                 top: "50%",
-                left: "-10px",
+                left: ["70px", "60px","60px","60px","60px", "20px"],
               }}
             >
               Fullstack Developer
             </Text>
-            <Flex flexWrap="wrap" w="300px">
+            <Flex flexWrap="wrap" w="400px">
               <Text
-                fontSize={["xl", "xl", "xl", "xl", "lg", "2xl"]}
+                fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 fontFamily={theme.fonts.primary}
                 color="#505050"
                 position="relative"
@@ -115,30 +103,36 @@ const Main = () => {
             position="relative"
           />
         </Flex>
-        <Flex justifyContent="center" gap="2rem">
-          <Flex
-            //transform="skewX(10deg)"
-            as={motion.div}
-            drag="x"
-            dragConstraints={{ left: -100, right: 100 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition="0.2s linear"
-            padding="1rem"
-            border="1px solid #204b6a"
-            onClick={() => handleClick("../assets/cv.pdf", "LuchoQQPortfolio")}
-            _hover={{
-              boxShadow: "10px 10px 0px 0px #204b6a",
-            }}
+
+        <Flex justifyContent="center" gap="2rem" mt="3rem">
+          <a
+            href="https://drive.google.com/file/d/1V6rY9qsVnZGASS8ZHwgyVaigaOMOXCRE/view"
+            download
+            target="_blank"
           >
-            <Text
-              fontFamily={theme.fonts.secondary}
-              fontSize="xl"
-              alignSelf="center"
+            <Flex
+              //transform="skewX(10deg)"
+              as={motion.div}
+              drag="x"
+              dragConstraints={{ left: -100, right: 100 }}
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
+              transition="0.2s linear"
+              padding="1rem"
+              border="1px solid #204b6a"
+              _hover={{
+                boxShadow: "10px 10px 0px 0px #204b6a",
+              }}
             >
-              Download CV
-            </Text>
-          </Flex>
+              <Text
+                fontFamily={theme.fonts.secondary}
+                fontSize="xl"
+                alignSelf="center"
+              >
+                Download CV
+              </Text>
+            </Flex>
+          </a>
           <Box
             as={motion.div}
             drag="x"
@@ -165,6 +159,7 @@ const Main = () => {
           mb="1rem"
           flexDir="column"
           gap="2rem"
+          mt="auto"
         >
           <Grid>
             <Flex justifyContent="center" gap="1rem" flexWrap="wrap">
