@@ -1,4 +1,5 @@
 import {
+  Box,
   Button,
   Flex,
   FormControl,
@@ -29,6 +30,7 @@ let schema = yup.object().shape({
 });
 
 function Contact() {
+  const [button, setButton] = useState(false)
   const handleSubmit = (e: any) => {
     e.preventDefault();
     console.log(e.target);
@@ -162,7 +164,7 @@ function Contact() {
                 </FormLabel>
                 <Textarea name="message" id="" />
               </FormControl>
-              <Button type="submit">Enviar</Button>
+              <Button type="submit" m='1rem' disabled={button} colorScheme='teal'>Enviar</Button>
             </form>
           </Flex>
         </Flex>

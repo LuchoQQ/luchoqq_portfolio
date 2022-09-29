@@ -56,6 +56,9 @@ function PortfolioCard({
               </Text>
               {github ? (
                 <Flex mt="2rem" gap="1rem">
+                  <Text fontSize="xl" fontFamily={theme.fonts.primary}>
+                    Repositorio:{" "}
+                  </Text>
                   <Link href={github}>
                     <Icon as={AiOutlineGithub} fontSize="4xl" />
                   </Link>
@@ -64,13 +67,18 @@ function PortfolioCard({
                       <Icon as={AiOutlineGithub} fontSize="4xl" />
                     </Link>
                   ) : null}
-                  {web ? (
-                    <Link href={web}>
-                      <Icon as={AiOutlineGlobal} fontSize="4xl" />
-                    </Link>
-                  ) : null}
                 </Flex>
               ) : null}
+              <Flex>
+                <Text fontSize="xl" fontFamily={theme.fonts.primary}>
+                  Web:{" "}
+                </Text>
+                {web ? (
+                  <Link href={web}>
+                    <Icon as={AiOutlineGlobal} fontSize="4xl" />
+                  </Link>
+                ) : null}
+              </Flex>
             </Flex>
           </ModalBody>
 
@@ -83,13 +91,13 @@ function PortfolioCard({
       </Modal>
       <Grid
         minW={["320px"]}
-        maxW='20vw'
+        maxW="20vw"
         justifySelf="center"
         position="relative"
         boxShadow="1px 1px 5px 5px #dedede"
       >
         <Flex gap="1rem" bg="#fff" flexDir="column">
-          <Image src={src} w={["320px","400px"]} />
+          <Image src={src} w={["320px", "400px"]} />
           <Grid p="1rem" gap="1rem">
             <Box>
               <Text

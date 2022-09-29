@@ -103,11 +103,12 @@ const Main = () => {
           />
         </Flex>
 
-        <Flex justifyContent="center" gap="2rem" mt="3rem">
+        <Flex justifyContent="center" gap="2rem" my="3rem" alignSelf='center'>
           <a
             href="https://drive.google.com/file/d/1V6rY9qsVnZGASS8ZHwgyVaigaOMOXCRE/view"
             download
             target="_blank"
+            rel="noreferrer"
           >
             <Button content='Download CV' />
           </a>
