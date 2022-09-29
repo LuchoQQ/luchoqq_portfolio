@@ -49,7 +49,7 @@ const NavItem = ({ icon, name, path, setNav, nav }: Props) => {
           />
           <Text
             color={nav === path ? "#6a3fb5" : "#727272"}
-            fontSize={["lg", "lg", "lg", "lg", "lg", "2xl"]}
+            fontSize={["sm", "sm", "sm", "sm", "lg", "xl"]}
             fontFamily={theme.fonts.primary}
           >
             {name}

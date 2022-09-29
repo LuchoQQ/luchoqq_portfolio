@@ -46,10 +46,11 @@ const Sidebar = () => {
           <Flex w="25vw" p="3rem" justifyContent="space-between">
             <Box w="70px" h="70px">
               <Image
-                src="https://res.cloudinary.com/diylksocz/image/upload/v1658451055/378a270e775265622393da8c0527417e_phnp4l.jpg"
+                src="https://res.cloudinary.com/diylksocz/image/upload/v1664479787/photomania-9a1ef998bf7512c44bf41112d2f38c91_hcn5u4.jpg"
                 w="100%"
                 h="100%"
                 rounded="5px"
+                fit="cover"
               />
             </Box>
             <Box>

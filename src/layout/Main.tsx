@@ -112,7 +112,9 @@ const Main = () => {
           >
             <Button content="Download CV" />
           </a>
-          <Button content="To Contact" />
+          <Link to="contact" spy={true} smooth="true" offset={0}>
+            <Button content="To Contact" />
+          </Link>
         </Flex>
         <Flex
           w="100%"

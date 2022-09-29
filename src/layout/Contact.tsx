@@ -30,10 +30,9 @@ let schema = yup.object().shape({
 });
 
 function Contact() {
-  const [button, setButton] = useState(false)
+  const [button, setButton] = useState(false);
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    console.log(e.target);
     emailjs
       .sendForm(
         "service_przmmqv",
@@ -42,7 +41,6 @@ function Contact() {
         process.env.NEXT_PUBLIC_API_PUBLIC_KEY
       )
       .then((res) => {
-        console.log(res.status);
         if (res.status === 200) {
           toast({
             title: "Enviado exitosamente!.",
@@ -164,7 +162,14 @@ function Contact() {
                 </FormLabel>
                 <Textarea name="message" id="" />
               </FormControl>
-              <Button type="submit" m='1rem' disabled={button} colorScheme='teal'>Enviar</Button>
+              <Button
+                type="submit"
+                m="1rem"
+                disabled={button}
+                colorScheme="gray"
+              >
+                Enviar
+              </Button>
             </form>
           </Flex>
         </Flex>
