@@ -22,7 +22,6 @@ import NavItem from "../components/NavItem";
 
 const Sidebar = () => {
   const [nav, setNav] = useState();
-  console.log(nav);
   const theme = useTheme();
   return (
     <>

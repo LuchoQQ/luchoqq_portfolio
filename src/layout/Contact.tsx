@@ -41,7 +41,9 @@ function Contact() {
         process.env.NEXT_PUBLIC_API_PUBLIC_KEY
       )
       .then((res) => {
+        console.log(res)
         if (res.status === 200) {
+          console.log(res);
           toast({
             title: "Enviado exitosamente!.",
             status: "success",
@@ -167,6 +169,7 @@ function Contact() {
                 m="1rem"
                 disabled={button}
                 colorScheme="gray"
+                onClick={() => setButton(true)}
               >
                 Enviar
               </Button>
