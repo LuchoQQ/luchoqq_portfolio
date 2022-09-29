@@ -22,19 +22,19 @@ function TabAbout() {
               fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}
               _selected={{ color: "#6a3fb5" }}
             >
-              About Me
+              Acerca
             </Tab>
             <Tab
               fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}
               _selected={{ color: "#6a3fb5" }}
             >
-              Skills
+              Habilidades
             </Tab>
             <Tab
               fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}
               _selected={{ color: "#6a3fb5" }}
             >
-              Certifications
+              Certificaciones
             </Tab>
           </TabList>
 
@@ -112,7 +112,7 @@ function TabAbout() {
                 fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
-                Frontend: ReactJS, NextJS, TypeScript, Redux, ChakraUI,
+                • Frontend: ReactJS, NextJS, TypeScript, Redux, ChakraUI,
                 Tailwind, Bootstrap, react-particles, framer-motion,
                 styled-components...
               </Text>
@@ -123,7 +123,7 @@ function TabAbout() {
                 fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
-                Backend: NodeJS, Express, Mongoose, Sequelize, Jest,
+                • Backend: NodeJS, Express, Mongoose, Sequelize, Jest,
                 express-validator,...
               </Text>
               <Text
@@ -133,7 +133,7 @@ function TabAbout() {
                 fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
-                Databases: MongoDB, MySQL, PostgreSQL
+                • Databases: MongoDB, MySQL, PostgreSQL
               </Text>
               <Text
                 maxW="500px"
@@ -142,37 +142,37 @@ function TabAbout() {
                 fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]}
                 mt="1rem"
               >
-                General Skills: Jira, Trello, GitHub, Git
+                • General Skills: Jira, Trello, GitHub, Git
               </Text>
             </TabPanel>
             <TabPanel px="4rem">
               <Box fontFamily={theme.fonts.primary}>
                 <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#303030" mt="1rem">
-                  Responsive Web Design
+                •Responsive Web Design
                 </Text>
                 <Text color="#ababab">-at FreeCodeCamp (July, 2021)</Text>
               </Box>
               <Box fontFamily={theme.fonts.primary}>
                 <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#505050" mt="1rem">
-                  Javascript Algorithms and Data Structure
+                • Javascript Algorithms and Data Structure
                 </Text>
                 <Text color="#ababab">-at FreeCodeCamp (November, 2021)</Text>
               </Box>
               <Box fontFamily={theme.fonts.primary}>
                 <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#505050" mt="1rem">
-                  Front End Web Development Ultimate Course 2021
+                • Front End Web Development Ultimate Course 2021
                 </Text>
                 <Text color="#ababab">-at Udemy (March, 2022)</Text>
               </Box>
               <Box fontFamily={theme.fonts.primary}>
                 <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#505050" mt="1rem">
-                  Escuela de Javascript
+                • Escuela de Javascript
                 </Text>
                 <Text color="#ababab">-at Platzi (May, 2022)</Text>
               </Box>
               <Box fontFamily={theme.fonts.primary}>
                 <Text fontSize={["lg", "lg", "lg", "lg", "lg", "xl"]} color="#505050" mt="1rem">
-                  Aceleracion Fullstack
+                • Aceleracion Fullstack
                 </Text>
                 <Text color="#ababab">-at Alkemy (July, 2022)</Text>
               </Box>

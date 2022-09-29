@@ -1,6 +1,5 @@
 import {
   Box,
-  Button,
   Flex,
   Grid,
   Icon,
@@ -9,9 +8,9 @@ import {
   Image,
   position,
 } from "@chakra-ui/react";
+import Button from '../components/Button'
 import TechsIcon from "../components/TechsIcon";
 import { Link } from "react-scroll";
-import { motion, isValidMotionProp } from "framer-motion";
 
 const Main = () => {
   const theme = useTheme();
@@ -110,48 +109,9 @@ const Main = () => {
             download
             target="_blank"
           >
-            <Flex
-              //transform="skewX(10deg)"
-              as={motion.div}
-              drag="x"
-              dragConstraints={{ left: -100, right: 100 }}
-              whileHover={{ scale: 1.1 }}
-              whileTap={{ scale: 0.9 }}
-              transition="0.2s linear"
-              padding="1rem"
-              border="1px solid #204b6a"
-              _hover={{
-                boxShadow: "10px 10px 0px 0px #204b6a",
-              }}
-            >
-              <Text
-                fontFamily={theme.fonts.secondary}
-                fontSize="xl"
-                alignSelf="center"
-              >
-                Download CV
-              </Text>
-            </Flex>
+            <Button content='Download CV' />
           </a>
-          <Box
-            as={motion.div}
-            drag="x"
-            dragConstraints={{ left: -100, right: 100 }}
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.9 }}
-            transition="0.2s linear"
-            padding="1rem"
-            border="1px solid #204b6a"
-            _hover={{
-              boxShadow: "10px 10px 0px 0px #204b6a",
-            }}
-          >
-            <Link to="contact" spy={true} smooth="true" offset={0}>
-              <Text fontFamily={theme.fonts.secondary} fontSize="xl">
-                Go to Contact
-              </Text>
-            </Link>
-          </Box>
+          <Button content='To Contact'/>
         </Flex>
         <Flex
           w="100%"

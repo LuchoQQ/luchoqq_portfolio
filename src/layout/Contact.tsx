@@ -9,14 +9,52 @@ import {
   Text,
   Textarea,
   useTheme,
+  useToast,
 } from "@chakra-ui/react";
 import { BsLinkedin } from "react-icons/bs";
 import { AiOutlineGithub, AiFillMail } from "react-icons/ai";
 import { IoLogoWhatsapp } from "react-icons/io";
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
+import * as yup from "yup";
+
+let schema = yup.object().shape({
+  name: yup.string().required(),
+  age: yup.number().required().positive().integer(),
+  email: yup.string().email(),
+  website: yup.string().url(),
+  createdOn: yup.date().default(function () {
+    return new Date();
+  }),
+});
 
 function Contact() {
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    console.log(e.target);
+    emailjs
+      .sendForm(
+        "service_przmmqv",
+        "template_gcjvl3a",
+        e.target,
+        process.env.NEXT_PUBLIC_API_PUBLIC_KEY
+      )
+      .then((res) => {
+        console.log(res.status);
+        if (res.status === 200) {
+          toast({
+            title: "Enviado exitosamente!.",
+            status: "success",
+            duration: 9000,
+            isClosable: true,
+          });
+        }
+      })
+      .catch((res) => console.log(res));
+  };
+
   const theme = useTheme();
+  const toast = useToast();
   return (
     <>
       <Grid
@@ -44,7 +82,7 @@ function Contact() {
             h="500px"
           >
             <Text fontSize="3xl" fontFamily={theme.fonts.secondary} mb="auto">
-              Contactame!
+              Contactame
             </Text>
             <Flex gap="1rem">
               <Icon as={BsLinkedin} fontSize="4xl" />
@@ -98,22 +136,34 @@ function Contact() {
             rounded="20px"
             boxShadow="1px 1px 10px 1px #606060"
           >
-            <Text fontSize={["2xl", "2xl", "2xl", "2xl", "2xl","3xl"]} fontFamily={theme.fonts.secondary} mb="2rem">
-              Enviame tu opinión!
+            <Text
+              fontSize={["2xl", "2xl", "2xl", "2xl", "2xl", "3xl"]}
+              fontFamily={theme.fonts.secondary}
+              mb="2rem"
+            >
+              Enviame tu opinión
             </Text>
-            <FormControl>
-              <FormLabel fontSize={["xl", "xl", "xl", "xl", "xl","2xl"]} >Nombre</FormLabel>
-              <Input></Input>
-            </FormControl>
-            <FormControl>
-              <FormLabel fontSize={["xl", "xl", "xl", "xl", "xl","2xl"]} >E-mail</FormLabel>
-              <Input></Input>
-            </FormControl>
-            <FormControl>
-              <FormLabel fontSize={["xl", "xl", "xl", "xl", "xl","2xl"]} >Deja un mensaje</FormLabel>
-              <Textarea></Textarea>
-            </FormControl>
-            <Button>Enviar</Button>
+            <form onSubmit={handleSubmit}>
+              <FormControl>
+                <FormLabel fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}>
+                  Nombre
+                </FormLabel>
+                <Input type="text" name="from_name" />
+              </FormControl>
+              <FormControl>
+                <FormLabel fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}>
+                  E-mail
+                </FormLabel>
+                <Input type="email" name="from_email" />
+              </FormControl>
+              <FormControl>
+                <FormLabel fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}>
+                  Deja un mensaje
+                </FormLabel>
+                <Textarea name="message" id="" />
+              </FormControl>
+              <Button type="submit">Enviar</Button>
+            </form>
           </Flex>
         </Flex>
       </Grid>

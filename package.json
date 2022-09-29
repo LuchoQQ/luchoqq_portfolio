@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@chakra-ui/react": "^2.3.2",
+    "@emailjs/browser": "^3.7.0",
     "@emotion/react": "^11.10.4",
     "@emotion/styled": "^11.10.4",
     "@fontsource/arimo": "^4.5.9",
@@ -17,6 +18,7 @@
     "@makotot/ghostui": "^2.0.0",
     "axios": "^0.27.2",
     "file-loader": "^6.2.0",
+    "formik": "^2.2.9",
     "framer-motion": "^6.5.1",
     "jetbrains-mono": "^1.0.6",
     "next": "12.2.5",
@@ -25,7 +27,8 @@
     "react-icons": "^4.4.0",
     "react-scroll": "^1.8.7",
     "react-tsparticles": "^2.2.4",
-    "tsparticles": "^2.2.4"
+    "tsparticles": "^2.2.4",
+    "yup": "^0.32.11"
   },
   "devDependencies": {
     "@types/node": "18.7.15",

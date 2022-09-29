@@ -55,7 +55,7 @@ const Sidebar = () => {
             <Box>
               <Text
                 color="#dedede"
-                fontSize={["xl", "xl", "xl", "xl", "xl","2xl"]}
+                fontSize={["xl", "xl", "xl", "xl", "xl", "2xl"]}
                 fontFamily={theme.fonts.primary}
                 textAlign="end"
               >
@@ -82,21 +82,21 @@ const Sidebar = () => {
           />
           <NavItem
             icon={FaUserAlt}
-            name="About me"
+            name="Sobre mi"
             path="about"
             setNav={setNav}
             nav={nav}
           />
           <NavItem
             icon={BsFillBriefcaseFill}
-            name="Portfolio"
+            name="Proyectos"
             path="portfolio"
             setNav={setNav}
             nav={nav}
           />
           <NavItem
             icon={AiFillMail}
-            name="Contact"
+            name="Contacto"
             path="contact"
             setNav={setNav}
             nav={nav}

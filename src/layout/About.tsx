@@ -2,7 +2,6 @@ import { Box, Flex, Grid, Image, Text, useTheme } from "@chakra-ui/react";
 import React from "react";
 import { Link } from "react-scroll";
 import TabAbout from "../components/TabAbout";
-import { motion, isValidMotionProp } from "framer-motion";
 function About() {
   const theme = useTheme();
   return (
@@ -18,14 +17,14 @@ function About() {
         bg="#FDFDFD"
         id="about"
         boxShadow="10px 10px 10px 5px black"
-        p='2rem'
+        p="2rem"
       >
         <Text
-          fontSize={["4xl","4xl", "4xl", "4xl","4xl", "6xl"]}
+          fontSize={["4xl", "4xl", "4xl", "4xl", "4xl", "6xl"]}
           fontFamily={theme.fonts.secondary}
           textAlign="center"
         >
-          ABOUT ME
+          Sobre mi
         </Text>
         <Flex
           alignSelf="center"
@@ -42,9 +41,7 @@ function About() {
             />
           </Flex>
         </Flex>
-        <Flex justifyContent="center" gap="2rem" mt="auto">
-          
-        </Flex>
+        <Flex justifyContent="center" gap="2rem" mt="auto"></Flex>
       </Grid>
     </>
   );
