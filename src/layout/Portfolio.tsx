@@ -49,12 +49,12 @@ function Portfolio() {
           <PortfolioCard
             title="Ibiza"
             type="Landing Page"
-            briefDescription="Ibiza es una landing para un nightclub donde puedes realizar reservas"
+            briefDescription="Ibiza es una landing para un nightclub donde puedes ver las novedades en cuanto a eventos, descuentos y demás."
             description="Ibiza es una landing donde puedes ver los servicios que ofrece "
             src="https://res.cloudinary.com/diylksocz/image/upload/v1664202579/Captura_de_pantalla_2022-09-26_111130_cvr7ky.png"
             stack="ReactJS, ChakraUI, NodeJS, MongoDB, Mongoose, AWS S3"
             github="https://github.com/LuchoQQ/sporty"
-            web=""
+            web="https://ticketapp.vercel.app"
           />
           <PortfolioCard
             title="Sporty"

@@ -8,7 +8,7 @@ import {
   Image,
   position,
 } from "@chakra-ui/react";
-import Button from '../components/Button'
+import Button from "../components/Button";
 import TechsIcon from "../components/TechsIcon";
 import { Link } from "react-scroll";
 
@@ -74,7 +74,7 @@ const Main = () => {
                 bg: "#000",
                 position: "absolute",
                 top: "50%",
-                left: ["70px", "60px","60px","60px","60px", "20px"],
+                left: ["70px", "60px", "60px", "60px", "60px", "20px"],
               }}
             >
               Fullstack Developer
@@ -103,16 +103,16 @@ const Main = () => {
           />
         </Flex>
 
-        <Flex justifyContent="center" gap="2rem" my="3rem" alignSelf='center'>
+        <Flex justifyContent="center" gap="2rem" my="3rem" alignSelf="center">
           <a
             href="https://drive.google.com/file/d/1V6rY9qsVnZGASS8ZHwgyVaigaOMOXCRE/view"
             download
             target="_blank"
             rel="noreferrer"
           >
-            <Button content='Download CV' />
+            <Button content="Download CV" />
           </a>
-          <Button content='To Contact'/>
+          <Button content="To Contact" />
         </Flex>
         <Flex
           w="100%"
